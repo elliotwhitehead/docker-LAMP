@@ -1,6 +1,8 @@
 FROM greyltc/archlinux
 MAINTAINER Grey Christoforo <grey@christoforo.net>
 
+RUN pacman -Syu --noconfirm
+
 ADD install-lamp.sh /usr/sbin/install-lamp
 RUN install-lamp
 
@@ -24,6 +26,8 @@ EXPOSE 443
 EXPOSE 5432
 # for MySQL server (mariadb, only if START_MYSQL = true)
 EXPOSE 3306
+
+ADD src /srv/http/
 
 # start servers
 ADD startServers.sh /usr/sbin/start-servers
