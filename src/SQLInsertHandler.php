@@ -11,7 +11,7 @@ $Price = $_REQUEST['Price'];
 
 $connection = @mysqli_connect('localhost','root','','db123');
 
-$iq = "INSERT into store (id,name,quantity,price) values ('$ID','$Name','$Quantity','$Price')";
+$iq = "INSERT into store (id,name,qty,price) values ('$ID','$Name','$Quantity','$Price')";
 	   
 $insert_row =  mysqli_query($connection,$iq);  // Run the INSERT query.
 
