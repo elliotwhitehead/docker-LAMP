@@ -9,7 +9,7 @@ $Name = $_REQUEST['Name'];
 $Quantity = $_REQUEST['Quantity'];
 $Price = $_REQUEST['Price'];
 
-$connection = @mysqli_connect('localhost','root','sudo','lab6');
+$connection = @mysqli_connect('localhost','root','','db123');
 
 $iq = "INSERT into store (id,name,quantity,price) values ('$ID','$Name','$Quantity','$Price')";
 	   

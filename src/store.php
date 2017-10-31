@@ -6,7 +6,7 @@
 <?php
 // Obtain a connection object by connecting to the db
 $connection = @mysqli_connect ("localhost", "root",
-"sudo", "lab6");
+"", "db123");
 // please fill these parameters with the actual data
 if(mysqli_connect_errno())
 {
