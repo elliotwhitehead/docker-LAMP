@@ -27,7 +27,9 @@ EXPOSE 5432
 # for MySQL server (mariadb, only if START_MYSQL = true)
 EXPOSE 3306
 
-ADD src /srv/http/
+# Use this ADD statement, or run the container with a mounted volume (-v) to 
+# include project files with save-refresh functionality
+# ADD src /srv/http/
 
 # start servers
 ADD startServers.sh /usr/sbin/start-servers
